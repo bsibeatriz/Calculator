@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumário de Calculadoras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .calculator-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sumário de Calculadoras</h1>
+    <ul>
+        <li><a href="#" onclick="mostrarCalculadora('https://github.com/bsibeatriz/Calculator/blob/main/EIRP/index.html')">Calculadora de EIRP</a></li>
+        <li><a href="#" onclick="mostrarCalculadora('calculadora_fresnel')">Calculadora de Fresnel Zone</a></li>
+        <!-- Adicione outros links conforme necessário -->
+    </ul>
+
+    <div class="calculator-container" id="calculadora_eirp">
+        <!-- Conteúdo da Calculadora de EIRP -->
+        <!-- Inclua o conteúdo da sua calculadora aqui -->
+    </div>
+
+    <div class="calculator-container" id="calculadora_fresnel">
+        <!-- Conteúdo da Calculadora de Fresnel Zone -->
+        <!-- Inclua o conteúdo da sua calculadora aqui -->
+    </div>
+
+    <!-- Adicione outros contêineres conforme necessário -->
+
+    <script>
+        function mostrarCalculadora(calculatorId) {
+            // Oculta todos os contêineres de calculadora
+            const calculators = document.querySelectorAll('.calculator-container');
+            calculators.forEach(calculator => {
+                calculator.style.display = 'none';
+            });
+
+            // Mostra o contêiner da calculadora selecionada
+            const selectedCalculator = document.getElementById(calculatorId);
+            if (selectedCalculator) {
+                selectedCalculator.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
